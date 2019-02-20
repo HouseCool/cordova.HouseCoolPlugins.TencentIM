@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="Cloudcomment" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Cloudcomment</name>
+	<description>This plug-in features tencent cloud communication IM products</description>
+	<js-module name="Cloudcomment" src="www/Cloudcomment.js">
+		<clobbers target="Cloudcomment" />
+	</js-module>
+		<platform name="android">
+			<config-file parent="/*" target="res/xml/config.xml">
+				<feature name="Cloudcomment">
+				<param name="android-package" value="com.thl.IM" />
+			</feature>
+			</config-file>
+				<source-file src="src/android/Cloudcomment.java" target-dir="src/com/thl/IM" />
+				<source-file src="src/android/libs/bugly_2.4.0_imsdk_release.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/imsdk.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/imsdk_group_ext.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/imsdk_msg_ext.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/imsdk_sns_ext.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/mobilepb.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/qalsdk.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/tls_sdk.jar" target-dir="app/libs"/>
+				<source-file src="src/android/libs/wup-1.0.0-SNAPSHOT.jar" target-dir="app/libs"/>
+
+				<source-file src="src/android/libs/armeabi/lib_imcore_group_ext_gyp.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/lib_imcore_jni_gyp.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/lib_imcore_msg_ext_gyp.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/lib_imcore_sns_ext_gyp.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/libBugly.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/libgnustl_shared.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/libqalcodecwrapper.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/libqalmsfboot.so" target-dir="app/src/main/jniLibs/armeabi"/>
+				<source-file src="src/android/libs/armeabi/libwtcrypto.so" target-dir="app/src/main/jniLibs/armeabi"/>
+		</platform>
+	</plugin>
